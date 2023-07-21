@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">imagens
+    <title>Jokenpo</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Jokenpo</h1>
+        
+        <h2>Choose your move</h2>
+        <div class="buttons">
+            <label>
+                <input type="radio" onclick="reset()" name="play" value="rock" checked>
+                <button class="btn"><img src="assets/images/rock.png"></button>
+            </label>
+            <label>
+                <input type="radio" onclick="reset()" name="play" value="paper">
+                <button class="btn"><img src="assets/images/paper.png"></button>
+            </label>
+            <label>
+                <input type="radio" onclick="reset()" name="play" value="scissor">
+                <button class="btn"><img src="assets/images/scissor.png"></button>
+            </label>
+        </div>
+
+        <div class="bloco">
+            <button id="playing" class="btn-play">Play</button>
+        </div>
+        <div class="bloco bg-grey selected-image">
+            <div id="user">
+                <img src="assets/images/rock.png">
+            </div>
+            <div id="alert-container"></div>
+            <div id="pc" class="reverse"></div>
+        </div>
+        <table>
+            <tr>
+              <th>User</th>
+              <th>PC</th>
+              <th>Tie</th>
+            </tr>
+            <tr>
+              <td><span id="User">0</span></td>
+              <td><span id="PC">0</span></td>
+              <td><span id="Tie">0</span></td>
+            </tr>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
