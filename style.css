@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;500;600;700&display=swap');
-
+/* Pseudo-classe - variáveis CSS personalizadas */
 :root {
     --cian : #1498b9;
     --white: #FFF;
@@ -10,123 +9,34 @@
     --dark-transparent: rgba(255,255,255,.5);
 }
 
-* {
+/* Seletor Universal - se aplica a todos os elementos da página */
+* {                         
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-html, body{
-    width: 100%;
-    height: 100%;
-}
-
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-family: cursive;
-    background-color: var(--dark);
-}
-
-.container {
-    position: absolute;
-    width: 100%;
-    min-height: 650px;
-    background: var(--white);
-}
-
-h1 {
-    background-color: var(--cian);
-    color: var(--white);
-    padding: 15px 0;
-    font-size: 2rem;
     text-align: center;
 }
 
-h2 {
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 1.2rem;
-    padding: 20px 0;
+.card-header {
+    background-image: linear-gradient(to right, var(--cian), var(--white));
 }
 
-.bloco {
-    width: 100%;
-    padding: 20px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+.card-body {
+    margin: 10px;
 }
 
-.label {
-    border-radius: 10px;
-    width: 60px;
-    padding: 5px;
-    font-size: .8rem;
-    font-weight: 800;
-    color: var(--white);
-    text-align: center;
-    position: absolute;
-}
-
-table {
-    padding: 20px;
-    font-family: cursive;
-    width: 400px;
-    margin: auto;
-}
-
-td {
-    border: 1px solid var(--grey);
-    padding: 10px;
-    border-radius: 5px;
-    text-align: center;
-}
-
-th {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    text-align: center;
-    background-color: var(--cian);
-    color: var(--white);
-    border-radius: 5px;
-}
-
-.bg-grey {
-    background-color: var(--grey);
-    height: 180px;
-}
-
-.selected-image div {
-    width: 30%;
-}
-
-.selected-image div img{
-    max-width: 40%;
-}
-
-.reverse {
-    transform: scaleX(-1);
-}
-
-.buttons {
+.radio-buttons {
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-.buttons img{
+.radio-buttons img {
     max-width: 60%;
     transition: .3s;
 }
 
-label {
-    position: relative;
-}
-
-[type=radio]{
+[type=radio] {
     position: absolute;
     left: 0;
     opacity: 0;
@@ -144,7 +54,7 @@ label {
     margin-right: 0.5rem;
 }
 
-.btn {
+.choice-btn {
     width: 100px;
     height: 100px;
     border: 2px solid var(--cian);
@@ -154,41 +64,41 @@ label {
     transition: .3s;
 }
 
-.btn:hover{
-    background-color: var(--cian);
+label {
+    position: relative;
 }
 
-.btn:hover > img {
-    max-width: 70%;
-}
-
-.btn-play, .btn-play:disabled:hover {
-    width: 400px;
-    padding: 10px;
-    border: 2px solid var(--cian);
-    border-radius: 10px;
-    background-color: var(--grey);
-    color: var(--dark);
+.btn-play {
+    margin: 10px;
     margin-top: 20px;
-    font-size: 1rem;
-    font-weight: 900;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: .3s;
+    margin-bottom: 20px;
+    width: 250px;
 }
 
-.btn-play:hover{
-    background-color: var(--cian);
-    color: var(--white);
-    font-family: cursive;
+.start-area {
+    background-image: linear-gradient(to right, var(--cian), var(--white));
+    height: 200px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.selected-image img {
+    max-width: 50%;
+}
+
+.reverse {
+    transform: scaleX(-1);
 }
 
 #alert-container {
     position: fixed;
     top: 50%;
     left: 50%;
+    width: 150px;
     transform: translate(-50%, -50%);
-    padding: 20px;
+    padding: 10px;
     font-size: 1rem;
     text-align: center;
     background-color: var(--white);
@@ -197,4 +107,4 @@ label {
     border-radius: 8px;
     display: none; 
     z-index: 9999; 
-  }
+}
